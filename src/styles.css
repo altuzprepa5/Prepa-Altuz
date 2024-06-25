@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-400 after:w-full after:scale-x-0 after:hover:scale-x-50 after:transition after:duration-700 after:origin-center  hidden;
+  }
+
+  .nav-link-mobile {
+    @apply relative mb-[rem] font-semibold text-white cursor-pointer text-[27px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-700 after:origin-center;
+  }
+
+  .heading {
+    @apply text-center text-white text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase;
+  }
+}
+
+
+progress {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border: none;
+  background: transparent;
+}
+
+progress::-webkit-progress-bar {
+  background: #ffffff;
+}
+
+progress::-webkit-progress-value {
+  background-color: #8f44fd;
+}
+
+
+/* esto es para el slide automatico */
+/* Animación para el desplazamiento automático del texto */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Contenedor del slide con efectos de degradado en los bordes */
+.container-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.container-slide:before,
+.container-slide:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px; /* Controla la extensión del degradado */
+  height: 100%;
+  z-index: 2;
+}
+
+.container-slide:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #FFFFFF);
+}
+
+.container-slide:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF);
+}
+
+/* Animación del texto en el contenedor */
+.animate-marquee {
+  display: flex;
+  white-space: nowrap; /* Asegura que el texto fluya en una sola línea */
+  animation: slide 20s infinite linear;
+}
+
+/* Estilización del texto dentro del marquee */
+.animate-marquee p {
+  margin: 0 50px; /* Espaciado entre elementos */
+  color: #333; /* Color del texto */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: 500; /* Peso de la fuente */
+}
+
+/* Pausar la animación al pasar el mouse */
+.container-slide:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* carrusel */
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
+}
