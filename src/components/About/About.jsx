@@ -8,53 +8,67 @@ import {
 
 const About = () => {
   return (
-    <section className="mt-10 md:mt-20 pb-20 relative bg-slate-100">
+    <section className="mt-12 md:mt-20 pb-20 relative bg-slate-100">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center text-center mb-24" data-aos="fade-up-right"
-    data-aos-duration="1000">
-          <div className="w-full lg:w-6/12 px-4">
-            <h2 className="text-4xl font-semibold">Acerca de Nosotros</h2>
-            <p className="text-lg leading-relaxed m-4 text-gray-600 text-justify">
-              En Prepa Altuz, ofrecemos una educación integral que prepara a nuestros estudiantes para los retos del futuro. Contamos con un equipo docente altamente capacitado y un ambiente de aprendizaje innovador.
-            </p>
+        <div className="flex flex-wrap justify-center text-left mb-12" data-aos="fade-up-right" data-aos-duration="1000">
+          <div className="w-full lg:w-8/12 px-4 text-center">
+            <h2 className="text-4xl font-semibold">Prepa en línea ALTUZ</h2>
           </div>
         </div>
-        <div className="flex flex-wrap" data-aos="fade-up-left"
-    data-aos-duration="1000">
-          <div className="w-full md:w-1/2 p-4 hover:scale-105 transform transition-all duration-300">
+        <div className="flex flex-wrap justify-center" data-aos="fade-up-left" data-aos-duration="1000">
+          <div className="w-full md:w-1/3 p-4 hover:scale-105 transform transition-all duration-300">
             <Card>
               <CardHeader color="lightBlue">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                  alt="Educación de Calidad"
-                  className="w-full"
+                  src="/images/banner.png"
+                  alt="BUSINESS SCHOOL"
+                  className="w-full h-48 object-cover"
                 />
               </CardHeader>
-              <CardBody>
-                <Typography variant="h5" color="blueGray" className="font-semibold">
-                  Educación de Calidad
+              <CardBody className="text-center">
+                <Typography variant="h5" style={{ fontWeight: 'bold', color: '#2a1b8d' }} className="font-semibold">
+                  BUSINESS SCHOOL
                 </Typography>
                 <Typography variant="paragraph" color="gray" className="mt-2">
-                  Nuestros programas están diseñados para brindar una formación académica sólida y actualizada.
+                  Somos la <strong >primera y única </strong> prepa en linea con enfoque en aprendizajes de negocios y desarrollo personal en México.
                 </Typography>
               </CardBody>
             </Card>
           </div>
-          <div className="w-full md:w-1/2 p-4 hover:scale-105 transform transition-all duration-300">
+          <div className="w-full md:w-1/3 p-4 hover:scale-105 transform transition-all duration-300">
             <Card>
               <CardHeader color="lightBlue">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaGooto-by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                  alt="Actividades Extracurriculares"
-                  className="w-full"
+                  src="/images/student2.jpg"
+                  alt="FLEXIBILIDAD EN HORARIO"
+                  className="w-full h-48 object-cover"
                 />
               </CardHeader>
-              <CardBody>
-                <Typography variant="h5" color="blueGray" className="font-semibold">
-                  Actividades Extracurriculares
+              <CardBody className="text-center">
+                <Typography variant="h5" style={{ fontWeight: 'bold', color: '#2a1b8d' }} className="font-semibold">
+                  FLEXIBILIDAD EN HORARIO
                 </Typography>
                 <Typography variant="paragraph" color="gray" className="mt-2">
-                  Fomentamos el desarrollo integral de nuestros estudiantes con una variedad de actividades extracurriculares.
+                  Toma tus clases a la hora que prefieras en nuestra plataforma disponible 24 horas, desde cualquier parte de México.
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
+          <div className="w-full md:w-1/3 p-4 hover:scale-105 transform transition-all duration-300">
+            <Card>
+              <CardHeader color="lightBlue">
+                <img
+                  src="/images/RVOE.png"
+                  alt="ESTAMOS INCORPORADOS A LA SEP"
+                  className="w-full h-48 object-cover"
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h5" style={{ fontWeight: 'bold', color: '#2a1b8d' }} className="font-semibold">
+                  ESTAMOS INCORPORADOS A LA SEP
+                </Typography>
+                <Typography variant="paragraph" color="gray" className="mt-2">
+                  Estamos incorporados a la Secretaría de Educación Pública, por lo que tu certificado de bachillerato es válido en todo México, y con nosotros terminas tu prepa en 2 años.
                 </Typography>
               </CardBody>
             </Card>

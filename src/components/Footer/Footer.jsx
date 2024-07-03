@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-scroll";
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
@@ -6,18 +7,33 @@ const Footer = () => {
     // se le agrega un footer con la clase bg-[#08162c] text-white pt-16 pb-5 w-full fixed bottom-3 left-0
     // lo cual es un footer con un color de fondo azul oscuro y el texto en blanco 
     // con un padding top de 16 y un padding bottom de 5 y un ancho del 100% y fijo en la parte inferior
-    <footer className="bg-slate-500 text-white pt-16 pb-5 w-full bottom-3 left-0">
+    <footer className="bg-slate-700 text-white pt-16 pb-5 w-full bottom-3 left-0">
       <div className="container mx-auto px-6">
         <section className="border-b border-white/20 pb-5">
           <img src="images/logo.png" className="h-12 mx-auto mb-12" alt="Logo" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-9">
             <div className="flex flex-col items-center md:items-start">
               <h2 className="text-lg font-medium mb-2">Preparatoria</h2>
-              <a href="#" className="hover:text-gray-300">Sobre Nosotros</a>
-              <a href="#" className="hover:text-gray-300">Contacto</a>
+              <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-300"
+            >
+              Sobre Nosotros
+              </Link>
+              
+              <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hover:text-gray-300"
+            >
+              Contacto
+              </Link>
             </div>
             <div className="flex flex-col items-center md:items-start">
-              <h2 className="text-lg font-medium mb-2">Recursos</h2>
+              <h2 className="text-lg font-medium mb-2 text" >Recursos</h2>
               <a href="https://prepaaltuz.mx/" className="hover:text-gray-300">Prepa Altuz</a>
               <a href="#" className="hover:text-gray-300">Soporte</a>
             </div>

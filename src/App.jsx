@@ -1,11 +1,11 @@
-import { useLayoutEffect, useState, useEffect } from "react";
-import Nav from "./components/Navbar/Nav";
+import { useState, useEffect } from "react";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Footer  from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Nav from "./components/Navbar/Nav"
 
 function App() {
   // aNIMATION aos SETUP
@@ -35,44 +35,12 @@ function App() {
     AOS.refresh();
   }, []);
 
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  // este es el preloader
-  // su funcion es que cuando la pagina cargue se quite el preloader
-  // obtiene el body y el preloader
-  // para que se quite el preloader se remueve el preloader del body
-  const handleTransitionEnd = () => {
-    const root = document.getElementById("body");
-    const loader = document.getElementById("preloader");
-    root.removeChild(loader);
-    setIsLoaded(true); // Actualiza el estado para mostrar el contenido
-  };
-
-  //   el useLayoutEffect es un hook que se ejecuta despues de que se renderiza la pagina
-  //  se le agrega un evento de transicion para que cuando termine la transicion se quite el preloader
-  //   esto es para el preloader
-  // su funcion es que cuando la pagina cargue se quite el preloader
-  // se le agrega un evento de transicion para que cuando termine la transicion se quite el preloader
-  // se le agrega un setTimeout para que despues de 2 segundos se quite el preloader
-  // se le agrega un return para que cuando se quite el preloader se quite el evento de transicion
-  // se le agrega un useEffect para que se ejecute la funcion cuando se cargue la pagina
-  // se le agrega un div con la clase overflow-x-hidden para que no se vea el scroll horizontal
-  useLayoutEffect(() => {
-    const preloader = document.getElementById("preloader");
-    preloader.addEventListener("transitionend", handleTransitionEnd);
-    setTimeout(() => {
-      preloader.classList.remove("loading");
-    }, 1000);
-    return () => {
-      preloader.removeEventListener("transitionend", handleTransitionEnd);
-    };
-  }, []);
 
   return (
     // se le agrega un div con la clase overflow-x-hidden para que no se vea el scroll horizontal}
     // isLoaded es un estado que se le agrega a la pagina para que cuando se cargue se muestre el contenido
     <div className="overflow-x-hidden">
-      {isLoaded && (
         <div>
           <Nav />
           {/* Home section */}
@@ -92,7 +60,6 @@ function App() {
             </div>
           </div>
         </div>
-      )}
     </div>
   );
 }

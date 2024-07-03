@@ -26,8 +26,7 @@ const Nav = () => {
       <div className="w-[100%] fixed z-[10000] top-0 h-[12vh] bg-white shadow-md">
         <progress max="100" value="0"></progress>
         <div className="flex items-center justify-between w-[90%] mx-auto h-[100%]">
-          <div className="text-white text-2xl font-bold">
-            {" "}
+          <div className="text-2xl font-bold">
             <img src="/images/logo.png" alt="Altuz Logo" />
           </div>
           <div className="hidden md:flex space-x-8">
@@ -35,30 +34,21 @@ const Nav = () => {
               to="home"
               smooth={true}
               duration={500}
-              className="nav-link hover:scale-110 transform transition-all duration-300 text-black"
+              className="nav-link bg-yellow-300 text-black font-semibold px-4 py-2 rounded-lg hover:bg-yellow-400 transition duration-300"
             >
-              Inicio
-            </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="nav-link hover:scale-110 transform transition-all duration-300 text-black"
-            >
-              Acerca de
+              Blog
             </Link>
             <Link
               to="contact"
               smooth={true}
               duration={500}
-              className="nav-link hover:scale-110 transform transition-all duration-300 text-black"
+              className="nav-link bg-yellow-300 text-black font-semibold px-4 py-2 rounded-lg hover:bg-yellow-400 transition duration-300"
             >
               Contacto
             </Link>
           </div>
-
           <div className="md:hidden" onClick={toggleMenu}>
-            <Hamburger toggled={isOpen} />
+            <Hamburger toggled={isOpen} toggle={setIsOpen} />
           </div>
         </div>
         {isOpen && (
@@ -70,16 +60,7 @@ const Nav = () => {
               className="nav-link block px-4 py-2 text-black"
               onClick={toggleMenu}
             >
-              Inicio
-            </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              className="nav-link block px-4 py-2 text-black"
-              onClick={toggleMenu}
-            >
-              Acerca de
+              Blog
             </Link>
             <Link
               to="contact"

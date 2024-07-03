@@ -83,63 +83,50 @@ import {
 //     </>
 //   );
 // };
+{/* <Particle /> */}
 
 // export default Home;
 
 const Home = () => {
   return (
-    <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+    <section className="header relative pt-16 items-center flex min-h-screen">
       <Particle />
-      <div className="relative container mx-auto items-center flex flex-wrap"
-      data-aos="fade-up"
-      data-aos-duration="1000">
-        <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+      <div className="relative container mx-auto flex flex-wrap items-center">
+        <div className="w-full md:w-5/12 lg:w-6/12 px-4">
+          <img
+            className="w-full object-cover rounded-lg shadow-lg"
+            src="/images/student.png" // Replace with your actual image path
+            alt="Estudiante de ALTUZ Prepa en línea"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          />
+        </div>
+        <div className="w-full md:w-7/12 lg:w-6/12 xl:w-6/12 px-4" data-aos="fade-up" data-aos-duration="1000">
           <div className="pt-32 sm:pt-0">
-            <h2 className="font-semibold text-4xl text-gray-600">
-              Educación en linea de calidad <TextEffect />
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-gray-500">
-              Somos la Prepa en Línea de Sinaloa. Llevando educación de calidad
-              a cada rincón dentro y fuera del {" "}
-              <a
-                href="https://prepaaltuz.mx/"
-                className="text-gray-900"
-                rel="noopener noreferrer"
-              >
-                estado
-              </a>
-              .
-            </p>
-            <div className="mt-12">
+            <h1 className="text-4xl font-bold leading-tight" style={{ fontFamily: 'Oswald, sans-serif', color: '#3824cd' }}>
+              La <strong style={{ fontWeight: 'bold', color: '#2a1b8d' }}>primera y única prepa en línea</strong> con enfoque en aprendizajes de <strong style={{ fontWeight: 'bold', color: '#2a1b8d' }}>negocios y desarrollo personal</strong> en México, <strong style={{ fontWeight: 'bold', color: '#2a1b8d' }}>acreditada ante la SEP</strong>
+            </h1>
+            <div className="mt-12 flex justify-center">
               <a
                 href="https://wa.me/526674032204"
-                className="flex items-center justify-center text-black font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-green-400 active:bg-blue-200 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                className="flex items-center justify-center text-white font-bold px-6 py-4 rounded shadow-lg bg-green-500 hover:bg-green-600 active:bg-green-700 transition duration-150 ease-in-out"
+                style={{ marginBottom: '0.5rem' }}
               >
-                <FaWhatsapp className="mr-2 text-xl" />{" "}
-                {/* Ajusta el tamaño del icono si es necesario */}
-                WhatsApp
-              </a>
-              <a
-                href="tel:+526674032204"
-                className="flex items-center justify-center ml-1 text-black font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blue-200 active:bg-blue-200 uppercase text-sm shadow hover:shadow-lg"
-              >
-                <FaPhone className="mr-2 text-xl" />{" "}
-                {/* Ajusta el tamaño del icono si es necesario */}
-                Llamar
+                <FaWhatsapp className="mr-2 text-xl" /> WhatsApp
               </a>
             </div>
+            <span className="flex items-center justify-center text-sm text-black font-semibold">
+              COMIENZA TUS CLASES EN SEPTIEMBRE 2024
+            </span>
           </div>
         </div>
       </div>
-      <img
-        className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-        src="/images/student.png"
-        alt="estudiante"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-      />
     </section>
   );
 };
+
+
+
+
 
 export default Home;
