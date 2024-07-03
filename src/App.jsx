@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Footer  from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import Nav from "./components/Navbar/Nav"
+import Nav from "./components/Navbar/Nav";
+import { Navigate, Route, Routes, Link } from "react-router-dom";
+import { Blog } from "./components/Blog/Blog";
 
 function App() {
   // aNIMATION aos SETUP
@@ -35,33 +37,34 @@ function App() {
     AOS.refresh();
   }, []);
 
-
-
   return (
-    // se le agrega un div con la clase overflow-x-hidden para que no se vea el scroll horizontal}
-    // isLoaded es un estado que se le agrega a la pagina para que cuando se cargue se muestre el contenido
     <div className="overflow-x-hidden">
-        <div>
-          <Nav />
-          {/* Home section */}
-          <div id="home">
-            <Home />
-          </div>
-          <div className="relative z-[30]">
-            {/*About */}
-            <div id="about">
-              <About />
-            </div>
-            <div id="contact">
-              <Contact />
-            </div>
-            <div id="footer">
-              <Footer />
-            </div>
-          </div>
-        </div>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<Blog />} />
+        {/* comodin */}
+        <Route path="/*" element={<Navigate to="/" />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
+
+const HomePage = () => (
+  <>
+    <div id="home">
+      <Home />
+    </div>
+    <div className="relative z-[30]">
+      <div id="about">
+        <About />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+    </div>
+  </>
+);
 
 export default App;

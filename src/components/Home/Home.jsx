@@ -1,12 +1,6 @@
 import React from "react";
-import Particle from "./Particle";
-import TextEffect from "./TextEffect";
 import {
-  FaInstagram,
-  FaFacebook,
-  FaLinkedin,
   FaWhatsapp,
-  FaPhone,
 } from "react-icons/fa";
 
 // export const Home = () => {
@@ -90,7 +84,6 @@ import {
 const Home = () => {
   return (
     <section className="header relative pt-16 items-center flex min-h-screen">
-      <Particle />
       <div className="relative container mx-auto flex flex-wrap items-center">
         <div className="w-full md:w-5/12 lg:w-6/12 px-4">
           <img
