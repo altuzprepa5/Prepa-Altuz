@@ -20,14 +20,22 @@ const Nav = () => {
   }, [location]);
 
   useEffect(() => {
+    // Register GSAP and ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to("progress", {
+
+    // Create the animation
+    const progressAnimation = gsap.to("progress", {
       value: 100,
       scrollTrigger: {
         scrub: 0.5,
       },
     });
-  }, []);
+
+    // Cleanup function to kill the ScrollTrigger instances
+    return () => {
+      progressAnimation.scrollTrigger && progressAnimation.scrollTrigger.kill();
+    };
+  }, [location]);
 
   useEffect(() => {
     // Reset scroll position on route change
@@ -40,7 +48,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="w-[100%] fixed z-[10000] top-0 h-[12vh] bg-white shadow-md">
+      <div className="w-[100%] fixed z-[10000] top-0 h-[11vh] bg-white shadow-md">
         <progress max="100" value="0"></progress>
         <div className="flex items-center justify-between w-[90%] mx-auto h-[100%]">
           <div className="text-2xl font-bold">
@@ -86,15 +94,15 @@ const Nav = () => {
             >
               Blog
             </NavLink>
-            <ScrollLink
-              to="contact"
+            <NavLink
+              to="/#contact"
               smooth={true}
               duration={500}
               className="nav-link block px-4 py-2 text-black"
               onClick={toggleMenu}
             >
               Contacto
-            </ScrollLink>
+            </NavLink>
           </div>
         )}
       </div>
