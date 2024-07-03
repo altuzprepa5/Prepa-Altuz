@@ -56,7 +56,6 @@ const Nav = () => {
               to="/"
               smooth={true}
               duration={500}
-              className="nav-link"
             >
               <img src="/images/logo.png" alt="Altuz Logo" />
             </RouterLink>
