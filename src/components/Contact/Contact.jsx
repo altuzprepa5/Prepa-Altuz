@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 px-4">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6" data-aos="fade-up-right">
               <h6 className="font-semibold text-3xl">
                 RVOE BACH.003-24
               </h6>
@@ -44,7 +44,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 px-4">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6" data-aos="fade-up-left">
               <h6 className="text-4xl font-bold mb-4 text-center underline">
               <a
                   href="https://wa.me/526674032204"

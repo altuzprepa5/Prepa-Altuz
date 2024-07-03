@@ -7,7 +7,7 @@ const Footer = () => {
     // se le agrega un footer con la clase bg-[#08162c] text-white pt-16 pb-5 w-full fixed bottom-3 left-0
     // lo cual es un footer con un color de fondo azul oscuro y el texto en blanco 
     // con un padding top de 16 y un padding bottom de 5 y un ancho del 100% y fijo en la parte inferior
-    <footer className="bg-slate-700 text-white pt-16 pb-5 w-full bottom-3 left-0">
+    <footer className="bg-slate-700 text-white pt-16 pb-5 w-full bottom-3 left-0" data-aos="fade-up">
       <div className="container mx-auto px-6">
         <section className="border-b border-white/20 pb-5">
           <img src="images/logo.png" className="h-12 mx-auto mb-12" alt="Logo" />
