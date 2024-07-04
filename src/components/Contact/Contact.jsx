@@ -47,22 +47,25 @@ const Contact = () => {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6" data-aos="fade-up-left">
               <h6 className="text-4xl font-bold mb-4 text-center underline">
               <a
-                  href="https://wa.me/526674032204"
+                  href="https://wa.me/526674032204?text=¡Buenos%20días!%20Quiero%20más%20información%20sobre%20ALTUZ%20Prepa%20en%20Línea.%20Gracias"
+                  target="_blank"
                 >
                 ¿Quieres más <br/>información?
               </a>
               </h6>
               <div className="flex justify-center mb-4">
                 <a
-                  href="https://wa.me/526674032204"
+                  href="https://wa.me/526674032204?text=¡Buenos%20días!%20Quiero%20más%20información%20sobre%20ALTUZ%20Prepa%20en%20Línea.%20Gracias"
                   className="flex items-center justify-center text-white font-bold px-6 py-4 rounded shadow-lg bg-green-500 hover:bg-green-600 active:bg-green-700 transition duration-150 ease-in-out"
+                  target="_blank"
                 >
                   <FaWhatsapp className="mr-2 text-xl" /> WhatsApp
                 </a>
               </div>
               <p className="text-center text-4xl text-gray-800 underline">
               <a
-                  href="https://wa.me/526674032204"
+                  href="https://wa.me/526674032204?text=¡Buenos%20días!%20Quiero%20más%20información%20sobre%20ALTUZ%20Prepa%20en%20Línea.%20Gracias"
+                  target="_blank"
                 >Pide nuestro plan de estudios y costo de colegiatura
               </a>
               </p>

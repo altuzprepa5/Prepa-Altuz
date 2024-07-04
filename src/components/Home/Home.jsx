@@ -101,8 +101,9 @@ const Home = () => {
             </h1>
             <div className="mt-12 flex justify-center">
               <a
-                href="https://wa.me/526674032204"
+                href="https://wa.me/526674032204?text=¡Buenos%20días!%20Quiero%20más%20información%20sobre%20ALTUZ%20Prepa%20en%20Línea.%20Gracias"
                 className="flex items-center justify-center text-white font-bold px-6 py-4 rounded shadow-lg bg-green-500 hover:bg-green-600 active:bg-green-700 transition duration-150 ease-in-out"
+                target="_blank"
                 style={{ marginBottom: '0.5rem' }}
               >
                 <FaWhatsapp className="mr-2 text-xl" /> WhatsApp

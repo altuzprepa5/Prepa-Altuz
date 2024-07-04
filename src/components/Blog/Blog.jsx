@@ -1,7 +1,20 @@
 import React from "react";
 import Home from "../Home/Home";
+import { Reviews } from "./Reviews";
 
 export const Blog = () => {
+
+  const reviews = [
+    {
+      title: '¡Excelente Servicio!',
+      content: 'Estoy muy satisfecho con el servicio recibido. ¡Recomendado!',
+      author: 'Juan Pérez',
+      date: '2024-07-04',
+      avatar: 'https://example.com/avatar1.jpg',
+    },
+    // Más reviews
+  ];
+
   return (
     <main className="pt-20 pb-10 lg:pt-16 lg:pb-24 bg-white antialiased">
       <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
@@ -17,7 +30,6 @@ export const Blog = () => {
                 />
                 <div>
                   <a
-                    href="#"
                     rel="author"
                     className="text-xl font-bold text-gray-900 dark:text-black"
                   >
@@ -169,7 +181,8 @@ export const Blog = () => {
           </p>
         </article>
       </div>
-      <aside
+      {/* todo lo comentado a continuación es para poner más articulos para leer (en caso de agregar más) */}
+      {/* <aside
         aria-label="Artículos relacionados"
         className="py-8 lg:py-10 bg-gray-50 dark:white"
       >
@@ -269,7 +282,16 @@ export const Blog = () => {
             </article>
           </div>
         </div>
-      </aside>
+      </aside> */}
+      {/* esto es para la reviews */}
+      {/* <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-8">Opiniones de Nuestros Estudiantes</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {reviews.map((review, index) => (
+          <Reviews key={index} review={review} />
+        ))}
+      </div>
+    </div> */}
     </main>
   );
 };

@@ -38,10 +38,7 @@ const Footer = () => {
             duration={500}
             className="nav-link h-12 mx-auto mb-12"
           >
-            <img
-              src="images/logo.png"
-              alt="Logo"
-            />
+            <img src="images/logo.png" alt="Logo" />
           </NavLink>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-9">
@@ -67,10 +64,17 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center md:items-start">
               <h2 className="text-lg font-medium mb-2">Recursos</h2>
-              <a href="https://prepaaltuz.mx/" className="hover:text-gray-300">
+              <a
+                href="https://prepaaltuz.mx/"
+                className="hover:text-gray-300"
+                target="_blank"
+              >
                 Prepa Altuz
               </a>
-              <a href="mailto:controlescolar@prepaaltuz.mx" className="hover:text-gray-300">
+              <a
+                href="mailto:controlescolar@prepaaltuz.mx"
+                className="hover:text-gray-300"
+              >
                 Soporte
               </a>
             </div>
@@ -81,12 +85,14 @@ const Footer = () => {
                 <a
                   href="https://www.instagram.com/prepaaltuzsinaloa?igsh=dzU2cXpoMTVqczM2"
                   className="text-blue-500 hover:text-blue-400"
+                  target="_blank"
                 >
                   <FaInstagram className="h-9 w-9" />
                 </a>
                 <a
                   href="https://www.facebook.com/profile.php?id=61559572438929&mibextid=kFxxJD"
                   className="text-blue-500 hover:text-blue-400"
+                  target="_blank"
                 >
                   <FaFacebook className="h-9 w-9" />
                 </a>
@@ -97,7 +103,13 @@ const Footer = () => {
         <section className="flex flex-col md:flex-row justify-between items-center text-xs mt-5">
           <p>© 2024 All rights reserved</p>
           <div className="flex gap-4">
-            <a href="https://wa.me/526674032204" className="hover:text-gray-300">Contact</a>
+            <a
+              href="https://wa.me/526674032204?text=¡Buenos%20días!%20Quiero%20más%20información%20sobre%20ALTUZ%20Prepa%20en%20Línea.%20Gracias"
+              className="hover:text-gray-300"
+              target="_blank"
+            >
+              Contact
+            </a>
             <a className="hover:text-gray-300">Terms</a>
             <a className="hover:text-gray-300">Privacy</a>
           </div>
